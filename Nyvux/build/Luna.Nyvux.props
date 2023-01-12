@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+        ToolsVersion="15.0">
+  <ItemGroup>
+    <NyvuxAdditionalLibs Include="$(MSBuildThisFileDiredctory)\..\lib\$(Platform)\$(Configuration)\*.lib" />
+    <NyvuxLibs Include="$(MSBuildThisFileDiredctory)\..\bin\$(Platform)\$(Configuration)\native\*.lib"/>
+  </ItemGroup>
+  <PropertyGroup>
+    <NyvuxDebugSuffix Condition="'$(Configuration)' == 'Debug'">d</NyvuxDebugSuffix>
+    <NyvuxAdditionalLibsEach>@(NyvuxAdditionalLibs)</NyvuxAdditionalLibsEach>
+    <NyvuxLibsEach>@(NyvuxLibs)</NyvuxLibsEach>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+        $(NyvuxAdditionalLibsEach);nyvux$(NyvuxDebugSuffix).lib;%(AdditionalDependencies)
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\bin\$(Platform)\$(Configuration)\native;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

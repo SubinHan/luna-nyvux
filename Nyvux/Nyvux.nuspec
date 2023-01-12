@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Luna.Nyvux</id>
+    <version>1.0.2</version>
+    <title>Nyvux</title>
+    <authors>Subin Han</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/SubinHan/luna-nyvux</projectUrl>
+    <description>Tools for C++ developmentss.</description>
+    <releaseNotes>Fixed deployment issues</releaseNotes>
+    <tags>Native native nativepackage</tags>
+  </metadata>
+  <files>
+    <file src="include\**\*.*" target="include" />
+    <file src="build\**" target="build" />
+    <!--<file src="libs\**\*.*" target="libs" />-->
+    <file src="..\x64\Debug\*.*" target="bin\x64\Debug\native" />
+    <file src="..\Debug\*.*" target="bin\x86\Debug\native" />
+    <file src="..\x64\Release\*.*" target="bin\x64\Release\native" />
+    <file src="..\Release\*.*" target="bin\x86\Release\native" />
+  </files>
+</package>
