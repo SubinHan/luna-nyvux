@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Luna.Nyvux</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>Nyvux</title>
     <authors>Subin Han</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,6 +11,9 @@
     <projectUrl>https://github.com/SubinHan/luna-nyvux</projectUrl>
     <description>Tools for C++ developments.</description>
     <releaseNotes>
+      v1.0.4
+      - Bug fixed that string returned by EnvironmentVaribaleReader::getEnv() doesn't work corretly.
+      
       v1.0.3
       - Support reading environment variable of the system with wstring.
     </releaseNotes>
