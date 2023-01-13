@@ -2,15 +2,18 @@
 <package >
   <metadata>
     <id>Luna.Nyvux</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Nyvux</title>
     <authors>Subin Han</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <!-- <icon>icon.png</icon> -->
     <projectUrl>https://github.com/SubinHan/luna-nyvux</projectUrl>
-    <description>Tools for C++ developmentss.</description>
-    <releaseNotes>Fixed deployment issues</releaseNotes>
+    <description>Tools for C++ developments.</description>
+    <releaseNotes>
+      v1.0.3
+      - Support reading environment variable of the system with wstring.
+    </releaseNotes>
     <tags>Native native nativepackage</tags>
   </metadata>
   <files>
