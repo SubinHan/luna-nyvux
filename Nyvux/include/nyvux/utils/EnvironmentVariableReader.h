@@ -8,5 +8,6 @@ namespace nyvux
 	{
 	public:
 		static const std::string GetEnv(std::string Key);
+		static const std::wstring GetEnv(std::wstring Key);
 	};
 }

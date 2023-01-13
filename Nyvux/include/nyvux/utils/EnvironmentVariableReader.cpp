@@ -1,17 +1,32 @@
 #include "EnvironmentVariableReader.h"
-#include <cstdlib>
+#include <Windows.h>
 
 using namespace nyvux;
 using namespace std;
 
+
+
 const string EnvironmentVariableReader::GetEnv(string Key)
 {
-	char* env = nullptr;
-	size_t len{};
-	_dupenv_s(&env, &len, Key.c_str());
+	DWORD BufferSize = 65535;
 
-	if (env == nullptr)
-		return string{};
+	string Variable;
+	Variable.resize(BufferSize);
+	BufferSize = GetEnvironmentVariableA(Key.c_str(), &Variable[0], BufferSize);
+	if (!BufferSize)
+		Variable.resize(BufferSize);
 
-	return string(env, len);
+	return Variable;
+}
+
+const wstring EnvironmentVariableReader::GetEnv(wstring Key)
+{
+	DWORD BufferSize = 65535;
+	std::wstring Variable;
+	Variable.resize(BufferSize);
+	BufferSize = GetEnvironmentVariableW(Key.c_str(), &Variable[0], BufferSize);
+	if (!BufferSize)
+		Variable.resize(BufferSize);
+	
+	return Variable;
 }
