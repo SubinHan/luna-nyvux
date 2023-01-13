@@ -42,5 +42,17 @@ namespace NyvuxTest
 
 			Assert::IsTrue(Variable.empty());
 		}
+
+		TEST_METHOD(TestGetEnvStringWorksWell)
+		{
+			string Variable = EnvironmentVariableReader::GetEnv("gofpv2945i91rmc,-=");
+
+			Assert::IsTrue(Variable.empty());
+
+			Variable.append("asd");
+
+			Assert::IsFalse(Variable.empty());
+			Assert::AreEqual(Variable, string("asd"));
+		}
 	};
 }
