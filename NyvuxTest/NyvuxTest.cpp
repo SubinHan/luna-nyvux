@@ -27,5 +27,20 @@ namespace NyvuxTest
 
 			Assert::IsTrue(Variable.empty());
 		}
+
+		TEST_METHOD(TestGetEnvWstringWithPath)
+		{
+			wstring Variable = EnvironmentVariableReader::GetEnv(L"Path");
+
+			Assert::IsTrue(!Variable.empty());
+			Assert::IsTrue(Variable.find(L"AppData") != std::wstring::npos);
+		}
+
+		TEST_METHOD(TestGetEnvWstringWithWeird)
+		{
+			string Variable = EnvironmentVariableReader::GetEnv("gofpv2945i91rmc,-=");
+
+			Assert::IsTrue(Variable.empty());
+		}
 	};
 }
