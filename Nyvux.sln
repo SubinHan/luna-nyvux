@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nyvux", "Nyvux\Nyvux.vcxproj", "{02204416-9020-45E1-87D8-A1F093382EE2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NyvuxTest", "NyvuxTest\NyvuxTest.vcxproj", "{12B3E21A-7213-42DD-AAF7-A06782216723}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{02204416-9020-45E1-87D8-A1F093382EE2}.Release|x64.Build.0 = Release|x64
 		{02204416-9020-45E1-87D8-A1F093382EE2}.Release|x86.ActiveCfg = Release|Win32
 		{02204416-9020-45E1-87D8-A1F093382EE2}.Release|x86.Build.0 = Release|Win32
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Debug|x64.ActiveCfg = Debug|x64
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Debug|x64.Build.0 = Debug|x64
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Debug|x86.ActiveCfg = Debug|Win32
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Debug|x86.Build.0 = Debug|Win32
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Release|x64.ActiveCfg = Release|x64
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Release|x64.Build.0 = Release|x64
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Release|x86.ActiveCfg = Release|Win32
+		{12B3E21A-7213-42DD-AAF7-A06782216723}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
