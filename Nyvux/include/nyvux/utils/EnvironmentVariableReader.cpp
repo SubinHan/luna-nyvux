@@ -13,6 +13,9 @@ const string EnvironmentVariableReader::GetEnv(string Key)
 	string Variable;
 	Variable.resize(BufferSize);
 	BufferSize = GetEnvironmentVariableA(Key.c_str(), &Variable[0], BufferSize);
+	if (BufferSize)
+		BufferSize--;
+
 	Variable.resize(BufferSize);
 
 	return Variable;
@@ -24,6 +27,9 @@ const wstring EnvironmentVariableReader::GetEnv(wstring Key)
 	std::wstring Variable;
 	Variable.resize(BufferSize);
 	BufferSize = GetEnvironmentVariableW(Key.c_str(), &Variable[0], BufferSize);
+	if (BufferSize)
+		BufferSize--;
+
 	Variable.resize(BufferSize);
 	
 	return Variable;
