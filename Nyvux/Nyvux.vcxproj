@@ -72,9 +72,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)d</TargetName>
+    <IncludePath>D:\c++\Nyvux\Nyvux\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(ProjectName)d</TargetName>
+    <IncludePath>D:\c++\Nyvux\Nyvux\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\c++\Nyvux\Nyvux\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\c++\Nyvux\Nyvux\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -138,10 +146,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Nyvux.cpp" />
-    <ClCompile Include="include\nyvux\utils\EnvironmentVariableReader.cpp" />
+    <ClCompile Include="source\nyvux\utils\EnvironmentVariableReader.cpp" />
+    <ClCompile Include="source\nyvux\utils\Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\nyvux\utils\EnvironmentVariableReader.h" />
+    <ClInclude Include="include\nyvux\utils\Random.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="build\Luna.Nyvux.props" />

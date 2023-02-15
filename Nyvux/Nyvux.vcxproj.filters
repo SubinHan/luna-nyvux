@@ -18,12 +18,18 @@
     <ClCompile Include="Nyvux.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="include\nyvux\utils\EnvironmentVariableReader.cpp">
+    <ClCompile Include="source\nyvux\utils\EnvironmentVariableReader.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="source\nyvux\utils\Random.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\nyvux\utils\EnvironmentVariableReader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nyvux\utils\Random.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

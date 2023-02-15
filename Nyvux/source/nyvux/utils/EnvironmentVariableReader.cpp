@@ -1,10 +1,8 @@
-#include "EnvironmentVariableReader.h"
+#include "nyvux/utils/EnvironmentVariableReader.h"
 #include <Windows.h>
 
 using namespace nyvux;
 using namespace std;
-
-
 
 const string EnvironmentVariableReader::GetEnv(string Key)
 {
@@ -13,8 +11,6 @@ const string EnvironmentVariableReader::GetEnv(string Key)
 	string Variable;
 	Variable.resize(BufferSize);
 	BufferSize = GetEnvironmentVariableA(Key.c_str(), &Variable[0], BufferSize);
-	if (BufferSize)
-		BufferSize--;
 
 	Variable.resize(BufferSize);
 
@@ -27,8 +23,6 @@ const wstring EnvironmentVariableReader::GetEnv(wstring Key)
 	std::wstring Variable;
 	Variable.resize(BufferSize);
 	BufferSize = GetEnvironmentVariableW(Key.c_str(), &Variable[0], BufferSize);
-	if (BufferSize)
-		BufferSize--;
 
 	Variable.resize(BufferSize);
 	

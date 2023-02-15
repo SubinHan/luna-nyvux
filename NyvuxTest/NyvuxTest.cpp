@@ -65,5 +65,14 @@ namespace NyvuxTest
 			Variable.append("a");
 			Assert::AreEqual(*(Variable.rbegin()), 'a');
 		}
+
+		// Should set the environment variable: FOR_TEST / `1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?
+		TEST_METHOD(TestGetEnvStrictly)
+		{
+			string Variable = EnvironmentVariableReader::GetEnv("FOR_TEST");
+
+			Assert::IsFalse(Variable.empty());
+			Assert::AreEqual(Variable.c_str(), R"(`1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?)");
+		}
 	};
 }
